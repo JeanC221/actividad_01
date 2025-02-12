@@ -76,7 +76,7 @@ class FlutterCoursePage extends StatelessWidget {
               Text("UI Develoment"),
               Text("Architecture"),
               Text("Desing thinking"),
-              Text("Texting"),
+              Text("Testing"),
             ],
           ),
           const Divider(),
@@ -88,7 +88,10 @@ class FlutterCoursePage extends StatelessWidget {
   Widget buildModules() {
     return Column(
       children: [
-        const Text("Modules"),
+        const Text(
+          "Modules",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
         SizedBox(
           height: 100,
           child: ListView(
@@ -125,6 +128,56 @@ class FlutterCoursePage extends StatelessWidget {
   }
 
   Widget buildProjectList() {
-    return const Text("Projects");
+    return Column(
+      children: [
+        const Text(
+          "Projects",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+        SizedBox(
+          height: 160,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.folder, color: Colors.blue),
+                  title: Text("Random user"),
+                  trailing: const Icon(Icons.more_vert),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.folder, color: Colors.blue),
+                  title: Text("Note taking"),
+                  trailing: const Icon(Icons.more_vert),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.folder, color: Colors.blue),
+                  title: Text("Weather"),
+                  trailing: const Icon(Icons.more_vert),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.folder, color: Colors.blue),
+                  title: Text("Delivery app"),
+                  trailing: const Icon(Icons.more_vert),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: const Icon(Icons.folder, color: Colors.blue),
+                  title: Text("Sudoku"),
+                  trailing: const Icon(Icons.more_vert),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 }
